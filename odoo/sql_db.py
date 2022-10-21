@@ -709,7 +709,7 @@ def connection_info_for(db_or_uri):
     :param str db_or_uri: database name or postgres dsn
     :rtype: (str, dict)
     """
-    app_name = "PipeFull-%d" % os.getpid()
+    app_name = "odoo-%d" % os.getpid()
     if db_or_uri.startswith(('postgresql://', 'postgres://')):
         # extract db from uri
         us = urls.url_parse(db_or_uri)
